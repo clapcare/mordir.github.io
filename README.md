@@ -1,2 +1,0 @@
-# mordir.github.io
-## tpl
