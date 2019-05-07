@@ -77,7 +77,7 @@
 	<h2>Google 搜索</h1>
 	<form action="https://www.google.com/search" target="_blank" >
 		<input type="text" name="q" placeholder="请输入想要搜索的内容" >
-		<button type="submit">在新窗口打开搜索结果</button> 
+		<button>在新窗口打开搜索结果</button> 
 	</form>
 
 	<form action="#">
@@ -147,8 +147,12 @@
 	</form>
 	<hr />
 	<div>
-		<table border="1">
-			<p>货品列表</p>
+		<table border="1px">
+			<caption>货品列表</caption>
+			<colgroup>
+				<col>
+				<col bgcolor="red">
+			</colgroup>
 			<tr>
 				<th>编号</th>
 				<th>品名</th>
@@ -181,7 +185,12 @@
 		</table>
 	</div>
 	<hr />
-	<img src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" width="200px" height="200px" alt="猫头鹰？" title="猫头鹰?">
+	<img src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" width="200px" height="200px" alt="猫头鹰？" title="猫头鹰?" usemap="#map">
+	<map name="map">
+		<area shape="circle" coords="69,69,10" href="https://baidu.com">
+		<area shape="circle" coords="115,69,10" href="https://qq.com">
+		<area shape="rect" coords="0,0,115,115" href="https://jd.com">
+	</map>
 	<hr />
 	<a href="http://www.qq.com" target="myFrameName">点我加载小米</a>
 	<iframe name="myFrameName" width="300px" height="200px"></iframe><br />
