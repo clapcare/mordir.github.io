@@ -8,6 +8,9 @@
     <style>
       /* YOUR STYLE GOES HERE */
       /* 不得改变页面的任何html结构 */
+      body>p:first-child{
+      	color:red;
+      }
       a:link{color:pink;}
       a:visited{color:orange;}
       a:focus{color:blue;}
@@ -33,12 +36,6 @@
       }
       .b>ul>li:nth-child(n+35):nth-child(-n+50){
       	color:blue;
-      }
-      .prime>ul>li:nth-child(1){
-      	color: red;
-      }
-      .prime>ul>li:nth-child(2n){
-      	color: blue;
       }
     </style>
   </head>
@@ -207,7 +204,16 @@
     </div>
 
     <hr>
-
+<style type="text/css">
+	  .prime>ul>li:first-child,
+      .prime>ul>li:nth-child(2n+4),
+      .prime>ul>li:nth-child(3n+6),
+      .prime>ul>li:nth-child(5n+10),
+      .prime>ul>li:nth-child(7n+14)
+      {
+      	color: red;
+      }
+</style>
     <div class="prime">
       <p>让所有的质/素数(prime)（2，3，5，7，11，13……）跟合数（4，6，8，9，10……）为不同的颜色</p>
       nth-child(3n)
