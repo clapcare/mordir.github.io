@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			background: #F5F5F4;
+		}
+		input:checked + ::before{
+			margin-left: 100px;
+			border: 1px solid #15D85D;
+		}
+		input:checked + label{
+			box-shadow: 0 0 0 120px #15D85D inset;
+			border-color: #15D85D;
+			transition: 0.6s;
+		}
+		label{
+			width: 200px;
+			height: 100px;
+			display: inline-block;
+			border: 1px solid #CAC7C9;
+			background-color: #FFFFFF;
+			border-radius: 100px;
+			box-sizing: border-box;
+			position: relative;
+			cursor: pointer;
+			padding: 4px;
+		}
+		label::before{
+			content: "";
+			width: 80px;
+			height: 80px;
+			display: inline-block;
+			padding: 3px;
+			border: 1px solid #CAC7C9;
+			border-radius: 100px;
+			background-color: #fff;
+			box-shadow:3px 3px 6px #666;
+			transition: 0.6s;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<input hidden type="checkbox" name="" id="checkbox">
+		<label for="checkbox"></label>
+	</div>	
+</body>
+</html>
