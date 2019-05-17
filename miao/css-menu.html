@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul.nav>li{
+		  float:left;
+		}
+		ul{
+		  padding:0;
+		  list-style:none;
+		}
+		ul li{
+		  width:50px;
+		  position:relative;
+		  padding-right:40px;
+		  background-color:#80C342;
+		}
+		ul.nav>li>ul{
+		  top:100%;
+		  left:0;
+		}
+		ul ul{
+		  display:none;
+		  border:0px 1px solid transparent;
+		  background-clip:padding-box;
+		}
+		ul ul::before{
+		  content:">";
+		  position:absolute;
+		  left:-1em;
+		}
+		li:hover{
+		  background-color:#FFC700;
+		}
+
+		li:hover > ul {
+		  display:block;
+		}
+		ul ul {
+		  display: none;
+		  position:absolute;
+		  top:0px;
+		  left:100%;
+		}
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li>文件
+			<ul>
+				<li>新建
+					<ul>
+						<li>大哥</li>
+					</ul>	
+				</li>
+				<li>打开
+					<ul>
+						<li>二哥</li>
+					</ul>
+				</li>
+				<li>另存为</li>
+			</ul>
+		</li>
+		<li>首选项</li>
+		<li>帮助</li>
+	</ul>
+</body>
+</html>

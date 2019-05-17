@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		main{
+			width: 900px;
+			margin: 0 auto;
+			position:relative;
+		}
+		main input:checked+img{
+			display: block;
+		}
+		img{
+			margin: 0 auto;
+			width: 900px;
+			height:338px; 
+			position:absolute;
+			display: none;
+		}
+		.pre:hover{
+			width: 20px;
+			height:50px;
+			background-color: rgba(0,0,0,0.3);
+		}
+		.pre{
+			
+			
+			position: absolute;
+			left: 0;
+			top:auto;
+		}
+		.bar{
+
+		}
+		.nex{
+
+		}
+		.s{
+			width: 91px;
+			height: 17px;
+			position: absolute;
+			top:11px;
+			right: 28px;
+			display: inline-block;
+			border: 1px solid;
+		}
+		.s label{
+			margin: 0 5px; 
+			width: 15px;
+			height: 15px;
+			border: 1px solid;
+			display: inline-block;
+
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+	<input  hidden checked type="radio" name="slider" id="a">
+	<img src="https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg">
+	<input hidden type="radio" name="slider" id="b">
+	<img src="https://i1.mifile.cn/a4/xmad_15529884424562_HKYaG.jpg" alt="">
+	<input hidden type="radio" name="slider" id="c">
+	<img src="https://i1.mifile.cn/a4/xmad_15578241794363_XeOcx.jpg" alt="">
+	<div class="s">
+		<label for="a"></label>
+		<label for="b"></label>
+		<label for="c"></label>
+	</div>
+	
+<!-- 	<div>
+		<label for="a" class="pre"><</label>
+		<label for="b" class="bar"></label>
+		<label for="c" class="nex">></label>
+	</div>
+	<div>
+		<label for="a" class="pre"><</label>
+		<label for="b" class="bar"></label>
+		<label for="c" class="nex">></label>
+	</div>
+	<div>
+		<label for="a" class="pre"><</label>
+		<label for="b" class="bar"></label>
+		<label for="c" class="nex">></label>
+	</div> -->
+	</main>
+</body>
+</html>
