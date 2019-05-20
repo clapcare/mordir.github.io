@@ -8,9 +8,11 @@
 			width: 900px;
 			margin: 0 auto;
 			position:relative;
+			height: 340px;
 		}
 		main input:checked+img{
 			display: block;
+			transition: 2s;
 		}
 		img{
 			margin: 0 auto;
@@ -19,42 +21,41 @@
 			position:absolute;
 			display: none;
 		}
-		.pre:hover{
-			width: 20px;
-			height:50px;
+		.bar{
+			width: 60px;
+			height: 10px;
+			position: absolute;
+			bottom:10px;
+			right: 30px;
+			border: 1px solid;
+		}
+		.bar>label{
+			width: 10px;
+			height: 10px;
+			background-color: #8A7D99;
+			display: inline-block;
+			border-radius: 10px;
+			margin: 0px 5px;
+			float: left;
+		}
+		.xpre:hover{
+			width: 40px;
+			height:70px;
 			background-color: rgba(0,0,0,0.3);
 		}
 		.pre{
-			
-			
+			width: 40px;
+			height: 70px;
 			position: absolute;
-			left: 0;
-			top:auto;
+			left: 10px	;
+			top:50%;
 		}
-		.bar{
-
+		.pre>label{
+			position: absolute;
 		}
 		.nex{
 
 		}
-		.s{
-			width: 91px;
-			height: 17px;
-			position: absolute;
-			top:11px;
-			right: 28px;
-			display: inline-block;
-			border: 1px solid;
-		}
-		.s label{
-			margin: 0 5px; 
-			width: 15px;
-			height: 15px;
-			border: 1px solid;
-			display: inline-block;
-
-		}
-
 	</style>
 </head>
 <body>
@@ -65,27 +66,22 @@
 	<img src="https://i1.mifile.cn/a4/xmad_15529884424562_HKYaG.jpg" alt="">
 	<input hidden type="radio" name="slider" id="c">
 	<img src="https://i1.mifile.cn/a4/xmad_15578241794363_XeOcx.jpg" alt="">
-	<div class="s">
+	<div class="bar">
 		<label for="a"></label>
 		<label for="b"></label>
 		<label for="c"></label>
 	</div>
-	
-<!-- 	<div>
-		<label for="a" class="pre"><</label>
-		<label for="b" class="bar"></label>
-		<label for="c" class="nex">></label>
+	<div class="pre">
+		<label for="a"><</label>
+		<label for="b"><</label>
+		<label for="c"><</label>
 	</div>
-	<div>
-		<label for="a" class="pre"><</label>
-		<label for="b" class="bar"></label>
-		<label for="c" class="nex">></label>
+	<div class="nex">
+		<label for="a"></label>
+		<label for="b"></label>
+		<label for="c"></label>
 	</div>
-	<div>
-		<label for="a" class="pre"><</label>
-		<label for="b" class="bar"></label>
-		<label for="c" class="nex">></label>
-	</div> -->
+
 	</main>
 </body>
 </html>
