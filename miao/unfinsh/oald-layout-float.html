@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,body{
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.aside-left,.aside-right-a,.aside-right-b,main,.title,.content{
+			border: 1px solid;
+			box-shadow: 0 0 3px 0 inset ;
+			background-color: #EAEFF4;
+		}
+		.aside-left{
+			width: 150px;
+			height: 100%;
+			float: left;
+		}
+		main{
+			width: calc(100% - 450px);
+			height: 100%;
+			overflow:hidden;
+		}
+		.title{
+			height: 20%;
+			width: 100%;
+		}
+		.content{
+			height: 80%;
+			width: 100%;
+		}
+		.aside-right-a{
+			width: 150px;
+			height: 100%;
+			float: right;
+		}
+		.aside-right-b{
+			width: 150px;
+			height: 100%;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="aside-left"></div>
+	<main>
+		<div class="title"></div>
+		<div class="content"></div>
+	</main>
+	<div class="aside-right-a"></div>
+	<div class="aside-right-b"></div>
+</body>
+</html>
