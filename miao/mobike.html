@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>摩拜单车</title>
+	<style>
+		html,body{
+			margin: 0;
+			height: 100%;
+			width: 100%;
+			box-sizing: border-box; 
+		}
+		*{
+			box-sizing: border-box;
+		}
+		header{
+			width: 100%;
+			
+		}
+		.hero{
+			width: 100%;
+		}
+		/*.hero::after{
+		    content: "";
+		    height: 0;
+		    clear: both;
+		    overflow: hidden;
+		    display: block;
+		    visibility: hidden;
+		}*/
+		.hero-one{
+			width: 100%;
+			height: 768px;
+			background-size: cover;
+			background-position: center;
+		}
+		.hero1{
+			background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-3.jpg);
+		}
+		.hero2{
+			background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-4.jpg);
+		}
+		.hero3{
+			background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-6.jpg);
+		}
+		.intro{
+			width: 100%;
+			margin: 0 -1px; 
+		}
+		.intro-one{
+			float: left;
+			width: 25%;
+			height: 260px;
+			background-size: cover;
+			border: 1px solid white;
+		}
+		@media (max-width:1060px) {
+			.intro-one{
+				float: left;
+				width: 50%;
+				height: 260px;
+				background-size: cover;
+			}
+		}
+		@media (max-width:600px){
+			.intro-one{
+				float: left;
+				width: 100%;
+				height: 260px;
+				background-size: cover;
+			}
+		}
+		.intro-box1{
+			background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg);
+		}
+		.intro-box2{
+			background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg);
+		}
+		.intro-box3{
+			background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg);
+		}
+		.intro-box4{
+			background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg);
+		}
+		.intro::after{
+		    content: "";
+		    height: 0;
+		    clear: both;
+		    overflow: hidden;
+		    display: block;
+		    visibility: hidden;
+		}
+		.social{
+			width: 80%;
+			height: 140px;
+			margin: 0 auto;
+		}
+		.social-box{
+			margin: 0 auto;
+			height: 100%;
+			width: 33%;
+		}
+		dl{
+			
+			float: left;
+		}
+		dt{
+			margin-top: -50px;
+			margin-left: 60px; 
+		}
+		dd{
+			margin-left: 60px;
+		}
+		.wx::before{
+			content: "";
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			background: url("https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png") no-repeat;
+			background-size: 100%;
+		}
+		.hb::before{
+			content: "";
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			background: url("https://mobike.com/cn/assets/themes/moby/img/icon-rp.png") no-repeat;
+			background-size: contain;
+		}
+		.mf::before{
+			content: "";
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			background: url("https://mobike.com/cn/assets/themes/moby/img/icon-credit.png") no-repeat;
+			background-size: contain;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav></nav>
+		<div class="hero">
+			<div class="hero-one hero1"></div>
+			<!-- <div class="hero-one hero2"></div>
+			<div class="hero-one hero3"></div> -->
+		</div>
+		<div class="news"></div>
+	</header>
+	<main>
+		<div class="intro">
+			<div class="intro-one intro-box1"><a href="#"></a></div>
+			<div class="intro-one intro-box2"><a href="#"></a></div>
+			<div class="intro-one intro-box3"><a href="#"></a></div>
+			<div class="intro-one intro-box4"><a href="#"></a></div>
+		</div>
+		<div class="social">
+			<div class="social-box">
+				<dl class="wx">
+					<dt>微信小程序</dt>
+					<dd>微信扫一扫，直接用车</dd>
+				</dl>
+			</div>
+			<div class="social-box">
+				<dl class="hb">
+					<dt>红包车</dt>
+					<dd>骑摩拜，能赚钱</dd>
+				</dl>
+			</div>
+			<div class="social-box">
+				<dl class="mf">
+					<dt>摩范分</dt>
+					<dd>文明骑行，信用生活</dd>
+				</dl>
+			</div>
+		</div>
+	</main>
+	<footer></footer>
+</body>
+</html>
