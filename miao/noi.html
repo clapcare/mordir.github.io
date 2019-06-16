@@ -19,7 +19,8 @@
 <script type="x" id="ch0103/01">
 	var a = Number(prompt("请输入数字A"))
 	var b = Number(prompt("请输入数字B"))
-	console.log(a , b)
+	var i = a + b
+	console.log(i)
 </script>
 
 //计算(a+b)*c的值
@@ -116,16 +117,13 @@
 	console.log(R.toFixed(2))
 </script>
 
-未完成//11:计算浮点数相除的余数
+//11:计算浮点数相除的余数
 <script type="x" id="ch0103/11">
 	var a = Number(prompt("请输入双精度浮点数A"))
 	var b = Number(prompt("请输入双精度浮点数B"))
 	var k,r
-	a = parseInt(k) * b + r
-
-	while(0 <= r && r < b)
-	a %= b
-	console.log(R.toFixed(2))
+	var i = a % b
+	console.log(i)
 </script>
 
 
@@ -140,10 +138,13 @@
 	console.log(v.toFixed(2))
 </script>
 
-//未完成13:反向输出一个三位数
+//13:反向输出一个三位数
 <script type="x" id="ch0103/13">
 	var n = Number(prompt("请输入三位数字"))
-	console.log(.reverse(n))
+	b = (n % 10) * 100;
+	a = (n % 100) - (n % 10);
+	c = (n - (n % 100) ) / 100;
+	console.log(b + a + c)
 </script>
 
 //14:大象喝水
