@@ -1,0 +1,226 @@
+<script type="x" id="ch0104/01">
+  var a = Number(prompt())
+  if (a > 0) {
+    console.log('positive')
+  } else if (a < 0) {
+    console.log('negative')
+  } else {
+    console.log('zero')
+  }
+</script>
+
+<script type="x" id="ch0104/02">
+  var a = Number(prompt())
+  console.log(Math.abs(a))
+</script>
+//----------------模板-----------------
+
+//A+B问题
+<script type="x" id="ch0103/01">
+	var a = Number(prompt("请输入数字A"))
+	var b = Number(prompt("请输入数字B"))
+	console.log(a , b)
+</script>
+
+//计算(a+b)*c的值
+<script type="x" id="ch0103/02">
+	var a = Number(prompt("请输入数字A"))
+	var b = Number(prompt("请输入数字B"))
+	var c = Number(prompt("请输入数字C"))
+	var sum
+	if (a > -10000 && a < 10000 && b > -10000 && b < 10000 && c > -10000 && c < 10000){
+	sum = (a + b) * c
+}
+	console.log(sum)
+</script>
+
+//计算(a+b)/c的值
+<script type="x" id="ch0103/03">
+	var a = Number(prompt("请输入数字A"))
+	var b = Number(prompt("请输入数字B"))
+	var c = Number(prompt("请输入数字C"))
+	var sum
+	if (a > -10000 && a < 10000 && b > -10000 && b < 10000 && c > -10000 && c < 10000 && c != 0){
+	sum = (a + b) / c
+}
+	console.log(sum)
+</script>
+
+//带余除法
+<script type="x" id="ch0103/04">
+	var a = Number(prompt("请输入数字A"))
+	var b = Number(prompt("请输入数字B"))
+	var c
+	var d
+	c = paseInt(a / b)
+	d = a % b
+	console.log(c,d)
+</script>
+
+//05:计算分数的浮点数值
+<script type="x" id="ch0103/05">
+	var a = Number(prompt("请输入数字A"))
+	var b = Number(prompt("请输入数字B"))
+	var c = a / b
+	console.log(c.toFixed(9))
+</script>
+
+//06:甲流疫情死亡率
+<script type="x" id="ch0103/06">
+	var a = Number(prompt("确诊人数"))
+	var b = Number(prompt("死亡人数"))
+	var c = (b / a * 100).toFixed(3)
+	c += "%"
+	console.log(c)
+</script>
+
+//07:计算多项式的值
+<script type="x" id="ch0103/07">
+	var a = Number(prompt("请输入数字A"))
+	var b = Number(prompt("请输入数字B"))
+	var c = Number(prompt("请输入数字C"))
+	var d = Number(prompt("请输入数字D"))
+	var x = Number(prompt("请输入数字X"))
+	var fx = a * x * a * x *a * x + b * x * b * x + c * x + d
+	console.log(fx.toFixed(7))
+</script>
+
+//08:温度表达转化
+<script type="x" id="ch0103/08">
+	var f = Number(prompt("请输入华氏温度"))
+	var c
+	if(f >= -457.57){
+	c = 5 * (f - 32) / 9
+} else alert("请输入大于等于-459.67华氏温度")
+	console.log(c.toFixed(5))
+</script>
+
+//09:与圆相关的计算
+<script type="x" id="ch0103/09">
+	var r = Number(prompt("请输入圆的半径"))
+	var dia,per,area
+	if(0 < r && r <= 10000){
+	dia = 2 * r
+	per = dia * Math.PI
+	area = r * r * Math.PI
+} else alert("请输入符合要求的圆半径0 < r <= 10,000")
+	console.log(dia.toFixed(4),per.toFixed(4),area.toFixed(4))
+</script>
+
+//10:计算并联电阻的阻值
+<script type="x" id="ch0103/10">
+	var r1 = Number(prompt("请输入R1值"))
+	var r2 = Number(prompt("请输入R2值"))
+	var R
+	R = 1 / (1/r1 + 1 / r2)
+	console.log(R.toFixed(2))
+</script>
+
+未完成//11:计算浮点数相除的余数
+<script type="x" id="ch0103/11">
+	var a = Number(prompt("请输入双精度浮点数A"))
+	var b = Number(prompt("请输入双精度浮点数B"))
+	var k,r
+	a = parseInt(k) * b + r
+
+	while(0 <= r && r < b)
+	a %= b
+	console.log(R.toFixed(2))
+</script>
+
+
+//12:计算球的体积
+<script type="x" id="ch0103/12">
+	var r = Number(prompt("请输入球的半径"))
+	var r = parseInt(r)
+	var v
+	if(r < 100){
+	v = 4 / 3 * 3.14 * r * r * r 
+} else alert("请输入小于100的非负实数")
+	console.log(v.toFixed(2))
+</script>
+
+//未完成13:反向输出一个三位数
+<script type="x" id="ch0103/13">
+	var n = Number(prompt("请输入三位数字"))
+	console.log(.reverse(n))
+</script>
+
+//14:大象喝水
+<script type="x" id="ch0103/14">
+	var h = Number(prompt("请输入桶深度H"))
+	var r = Number(prompt("请输入桶底面半径R"))
+	var v,i
+	v = 3.14159 * r * r * h / 1000
+	i = 20 / v
+	console.log(Math.ceil(i))
+</script>
+
+//15:苹果和虫子
+<script type="x" id="ch0103/15">
+	var n = Number(prompt("你有几个苹果"))
+	var x = Number(prompt("虫子多少小时吃一个"))
+	var y = Number(prompt("给虫子多少小时"))
+	var i
+	if(y <= n * x){
+	i = n - Math.ceil(x * y)
+}
+	console.log(i)
+</script>
+
+//16:计算线段长度
+<script type="x" id="ch0103/16">
+	var xa = Number(prompt("请输入坐标XA"))
+	var ya = Number(prompt("请输入坐标YA"))
+	var xb = Number(prompt("请输入坐标XB"))
+	var yb = Number(prompt("请输入坐标YB"))
+	var length
+	length = Math.sqrt((xb - ya) * (xb - ya) + (xb - ya) * (xb - ya))
+	console.log(length.toFixed(3))
+</script>
+
+//17:计算三角形面积
+<script type="x" id="ch0103/17">
+	var x1 = Number(prompt("请输入坐标X1"))
+	var y1 = Number(prompt("请输入坐标Y1"))
+	var x2 = Number(prompt("请输入坐标X2"))
+	var y2 = Number(prompt("请输入坐标Y2"))
+	var x3 = Number(prompt("请输入坐标X3"))
+	var y3 = Number(prompt("请输入坐标Y3"))
+	var s
+	s = (x1 * y2 + x2 * y3 + x3 * y1 - x1 * y3 - x2 * y1 - x3 * y2) / 2  
+	console.log(s.toFixed(2))
+</script>
+
+//18:等差数列末项计算
+<script type="x" id="ch0103/18">
+	var a1 = Number(prompt("请输入第一项"))
+	var a2 = Number(prompt("请输入第二项"))
+	var n = Number(prompt("请输入第N项"))
+	var i
+	if(-100 <= a1 && a2 <= 100 && 0 < n && n <= 1000){
+	i = a1 + (a2 - a1) * (n - 1) 
+}
+	console.log(i)
+</script>
+
+//19:A*B问题
+<script type="x" id="ch0103/19">
+	var a = Math.abs(Number(prompt("请输入数字A")))
+	var b = Math.abs(Number(prompt("请输入数字B")))
+	var i
+	if(1 <= a && b <= 50000){
+	i = a * b  
+} else alert("A大于等于1，B小于等于5000")
+	console.log(i)
+</script>
+
+//20:计算2的幂
+<script type="x" id="ch0103/20">
+	var n = Math.abs(Number(prompt("请输入N")))
+	var i
+	if(0 <= n && n < 31){
+	i =Math.pow(2,n)  
+} else alert("N大于等于0，小于31")
+	console.log(i)
+</script>

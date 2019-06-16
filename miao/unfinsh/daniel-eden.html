@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width" user-scalable="0">
+	<style>
+		html,body{
+			margin: 0;
+			padding: 0px;
+		}
+		header{
+			height: 100px;
+			width: 100%;
+			border-bottom:1px solid;
+			align-items:center;
+			display:-webkit-flex;
+		}
+		.home{
+			float: left;
+			display: inline-block;
+			margin: 0 auto 0 25px;
+		}
+		.nav{
+			float: right;
+			margin: 0 25px 0 auto;
+		}
+		li{
+			list-style: none;
+			display: inline-block;
+			margin: 10px;
+		}
+		a:hover{
+			color: #E33D26;
+		}
+		a{
+			text-decoration: none; 
+			color: #000207;
+		}
+		main{
+			margin: 50px auto 50px auto;
+			width: 520px;
+			height: 540px;
+			position: relative;
+
+		}
+		img{
+			width: 240px;
+			height: 360px;
+			position: absolute;;
+		}
+		.a{
+
+		}
+		.b{
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto; 
+		}
+		.c{
+			right: 0;
+			bottom: 0;
+		}
+		.a:hover{
+			z-index: 1;
+		}	
+		.b:hover{
+			z-index: 1;
+		}	
+		.c:hover{
+			z-index: 1;
+		}	
+	</style>
+</head>
+<body>
+	<header>
+		<div class="home">
+			<a href="#">Daniel Eden,Designer</a>
+		</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Library</a></li>
+			</ul>
+		</div>
+	</header>
+	<main>
+		<img class="a" src="https://daneden.imgix.net/2018/10/portrait.jpg?auto=format&fit=crop&ixlib=react-8.6.1&w=594" alt="">
+		<img class="b" src="https://daneden.imgix.net/2018/10/GenArt.png?auto=format&fit=crop&ixlib=react-8.6.1&w=594" alt="">
+		<img class="c" src="https://daneden.imgix.net/2019/04/home.jpeg?auto=format&fit=crop&ixlib=react-8.6.1&w=594" alt="">
+	</main>
+</body>
+</html>

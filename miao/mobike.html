@@ -45,9 +45,20 @@
 		}
 		.intro{
 			width: 100%;
-			margin: 0 -1px; 
+			/*margin: 0 -1px; */
+			display: flex;
 		}
 		.intro-one{
+			width: 340px;
+			height: 260px;
+			background-size: cover;
+			border: 1px solid white;
+			flex-flow: row wrap;
+			justify-content: space-around;
+
+		}
+
+		/*.intro-one{
 			float: left;
 			width: 25%;
 			height: 260px;
@@ -69,7 +80,7 @@
 				height: 260px;
 				background-size: cover;
 			}
-		}
+		}*/
 		.intro-box1{
 			background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg);
 		}
@@ -82,26 +93,22 @@
 		.intro-box4{
 			background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg);
 		}
-		.intro::after{
+		/*清除浮动*/
+/*		.intro::after{
 		    content: "";
 		    height: 0;
 		    clear: both;
 		    overflow: hidden;
 		    display: block;
 		    visibility: hidden;
-		}
+		}*/
 		.social{
 			width: 80%;
 			height: 140px;
 			margin: 0 auto;
 		}
 		.social-box{
-			margin: 0 auto;
-			height: 100%;
 			width: 33%;
-		}
-		dl{
-			
 			float: left;
 		}
 		dt{
