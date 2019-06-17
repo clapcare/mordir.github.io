@@ -1,21 +1,5 @@
-<script type="x" id="ch0104/01">
-  var a = Number(prompt())
-  if (a > 0) {
-    console.log('positive')
-  } else if (a < 0) {
-    console.log('negative')
-  } else {
-    console.log('zero')
-  }
-</script>
-
-<script type="x" id="ch0104/02">
-  var a = Number(prompt())
-  console.log(Math.abs(a))
-</script>
-//----------------模板-----------------
-
-//A+B问题
+//-----1.3编程基础之算术表达式与顺序执行--------
+//01：A+B问题
 <script type="x" id="ch0103/01">
 	var a = Number(prompt("请输入数字A"))
 	var b = Number(prompt("请输入数字B"))
@@ -23,7 +7,7 @@
 	console.log(i)
 </script>
 
-//计算(a+b)*c的值
+//02：计算(a+b)*c的值
 <script type="x" id="ch0103/02">
 	var a = Number(prompt("请输入数字A"))
 	var b = Number(prompt("请输入数字B"))
@@ -35,7 +19,7 @@
 	console.log(sum)
 </script>
 
-//计算(a+b)/c的值
+//03：计算(a+b)/c的值
 <script type="x" id="ch0103/03">
 	var a = Number(prompt("请输入数字A"))
 	var b = Number(prompt("请输入数字B"))
@@ -44,17 +28,16 @@
 	if (a > -10000 && a < 10000 && b > -10000 && b < 10000 && c > -10000 && c < 10000 && c != 0){
 	sum = (a + b) / c
 }
-	console.log(sum)
+	console.log(parseInt(sum))
 </script>
 
-//带余除法
+//04：带余除法
 <script type="x" id="ch0103/04">
 	var a = Number(prompt("请输入数字A"))
 	var b = Number(prompt("请输入数字B"))
-	var c
-	var d
-	c = paseInt(a / b)
-	d = a % b
+	b != 0
+	var c = parseInt(a / b)
+	var d = a % b
 	console.log(c,d)
 </script>
 
@@ -82,7 +65,7 @@
 	var c = Number(prompt("请输入数字C"))
 	var d = Number(prompt("请输入数字D"))
 	var x = Number(prompt("请输入数字X"))
-	var fx = a * x * a * x *a * x + b * x * b * x + c * x + d
+	var fx = a * Math.pow(x,3) + b * Math.pow(x,2) + c * x + d
 	console.log(fx.toFixed(7))
 </script>
 
@@ -102,8 +85,8 @@
 	var dia,per,area
 	if(0 < r && r <= 10000){
 	dia = 2 * r
-	per = dia * Math.PI
-	area = r * r * Math.PI
+	per = dia * 3.14159
+	area = r * r * 3.14159
 } else alert("请输入符合要求的圆半径0 < r <= 10,000")
 	console.log(dia.toFixed(4),per.toFixed(4),area.toFixed(4))
 </script>
@@ -121,7 +104,6 @@
 <script type="x" id="ch0103/11">
 	var a = Number(prompt("请输入双精度浮点数A"))
 	var b = Number(prompt("请输入双精度浮点数B"))
-	var k,r
 	var i = a % b
 	console.log(i)
 </script>
@@ -144,7 +126,7 @@
 	b = (n % 10) * 100;
 	a = (n % 100) - (n % 10);
 	c = (n - (n % 100) ) / 100;
-	console.log(b + a + c)
+	console.log(b,a,c)
 </script>
 
 //14:大象喝水
@@ -164,7 +146,7 @@
 	var y = Number(prompt("给虫子多少小时"))
 	var i
 	if(y <= n * x){
-	i = n - Math.ceil(x * y)
+	i = n - Math.ceil(y / x)
 }
 	console.log(i)
 </script>
@@ -224,4 +206,116 @@
 	i =Math.pow(2,n)  
 } else alert("N大于等于0，小于31")
 	console.log(i)
+</script>
+
+//----1.4编程基础之逻辑表达式与条件分支-----
+//01:判断数正负
+<script type="x" id="ch0104/01">
+	var n = Number(prompt("请输入N"))
+	if (Math.pow(-10,9) <= n && n <= Math.pow(10,9)){
+		if (n > 0) {
+		console.log("positive")
+	} 	else{
+			if (n == 0){
+			console.log("zero")
+		} 	else {
+			console.log("negative")
+		}
+	}	
+}	else{
+	console.log("重新输入N")
+}	
+</script>
+
+//02:输出绝对值
+<script type="x" id="ch0104/02">
+	var n = Number(prompt("请输入N"))
+	if (Math.abs(n) < 10000){
+		console.log(Math.abs(n).toFixed(2))
+	} else {
+	console.log("重新输入N")
+}
+</script>
+
+//03:奇偶数判断
+<script type="x" id="ch0104/03">
+	var n = Number(prompt("请输入N"))
+	if (n % 2 !== 0){
+		console.log("odd")
+	} else {
+	console.log("even")
+}
+</script>
+
+//04:奇偶ASCII值判断
+<script type="x" id="ch0104/04">
+	var n = prompt("请输入一位字符")
+	var i = n.charCodeAt()
+	if (i % 2 !== 0){
+		console.log("odd")
+	} else {
+	console.log("even")
+}
+</script>
+
+//05:整数大小比较
+<script type="x" id="ch0104/05">
+	var x = Number(prompt("请输入X"))
+	var y = Number(prompt("请输入Y"))
+	if (0 <= x && x < Math.pow(2,32) && Math.pow(-2,31) <= y && y < Math.pow(2,31))
+	if (x > y){
+		console.log(">")
+	} else if (x == y){
+	console.log("=")
+	} else {
+	console.log("<")
+}
+</script>
+
+//06:判断是否为两位数
+<script type="x" id="ch0104/06">
+	var n = Number(prompt("请输入两位数"))
+	if (n >= 10 && n <= 99){
+		console.log("1")
+	} else {
+	console.log("0")
+}
+</script>
+
+//07:收集瓶盖赢大奖
+<script type="x" id="ch0104/07">
+	var x = Number(prompt("请输入幸运瓶盖数量"))
+	var y = Number(prompt("请输入鼓励瓶盖数量"))
+	if (x >= 10 || y >= 20){
+		console.log("1")
+	} else {
+	console.log("0")
+}
+</script>
+
+//08:判断一个数能否同时被3和5整除
+<script type="x" id="ch0104/08">
+	var n = Number(prompt("请输入数字N"))
+	if (-1000000 < n && n < 1000000){
+		if (n % 3 == n % 5){
+		console.log("YES")
+	} else {
+	console.log("NO")
+	}
+	} 
+</script>
+
+//未完成09:判断能否被3，5，7整除
+<script type="x" id="ch0104/08">
+	var i = Number(prompt("请输入数字"))
+	if (i % 3 == i % 5 == i % 7){
+		console.log(3,5,7)
+	}else if (i % 3 == i % 5){
+			console.log(3,5)
+			if (i % 3 == i % 7){
+			console.log(3,7)
+			} else if (i % 5 == i % 7){
+					console.log(5,7)
+				}
+		}	
 </script>
