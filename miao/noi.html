@@ -319,3 +319,113 @@
 				}
 		}	
 </script>
+
+//10:有一门课不及格的学生
+<script type="x" id="ch0104/10">
+	var x = Number(prompt("请输入语文成绩"))
+	var y = Number(prompt("请输入数学成绩"))
+	if (x < 60 || y < 60){
+		console.log(1)
+	} else {
+		console.log(0)
+	} 
+</script>
+
+//11:晶晶赴约会
+<script type="x" id="ch0104/11">
+	var x = Number(prompt("请输入语文成绩"))
+	if (x === 1 && x === 3 && x ===5){
+		console.log("YES")
+	} else {
+		console.log("NO")
+	}
+</script>
+
+//12:骑车与走路
+<script type="x" id="ch0104/12">
+	var x = Number(prompt("请输入距离"))
+	var s = x / 1.2
+	var t = x / 3 + 50
+	if (s > t){
+		console.log("Bike")
+	} else if (s < t){
+		console.log("Walk")
+	} else {
+		console.log(All)
+	}
+</script
+
+//13:分段函数
+<script type="x" id="ch0104/13">
+	var x = Number(prompt("请数字X"))
+	var y
+	if (0 <= x && x <= 5){
+		y = -x + 2.5
+		console.log(y.toFixed(3))
+	} else {
+		if (5 <= x && x < 10){
+			y = 2 - 1.5 * (x - 3) * (x - 3)
+			console.log(y.toFixed(3))	
+		} else if(10 <= x && x < 20){
+			y = x / 2 -1.5	
+			console.log(y.toFixed(3))
+			}
+	} 
+</script>
+
+//14:计算邮资
+<script type="x" id="ch0104/14">
+	var w = Number(prompt("包裹多重"))
+	var vip =(prompt("是否要加急y/n"))
+	var p = 8
+	if (w > 1000){
+		p += Math.ceil((w - 1000) / 500) * 4
+	} 
+	if (vip === "y"){
+		p += 5
+	}
+		console.log(p)
+</script>
+
+//15:最大数输出
+<script type="x" id="ch0104/15">
+	var a = Number(prompt("请输入数字A"))
+	var b = Number(prompt("请输入数字B"))
+	var c = Number(prompt("请输入数字C"))
+	var max = Math.max(a,b,c)
+	console.log(max)
+</script>
+
+//16:三角形判断
+<script type="x" id="ch0104/16">
+	var a = Number(prompt("请输入数字A"))
+	var b = Number(prompt("请输入数字B"))
+	var c = Number(prompt("请输入数字C"))
+	if (a + b > c || a + c > b || b + c > a ||  a - b < c || a - c < b || b - a < c || b - c < a || c - a < b || c - b < a){
+		console.log("yes")
+	} else {
+		console.log("no")
+	}
+</script>
+
+//17:判断闰年
+<script type="x" id="ch0104/17">
+	var y = Number(prompt("请输入年份"))
+	if (y % 400 === 0 || y % 4 === 0 && y % 100 !==0 ){
+		console.log("Y")
+	} else {
+		console.log("N")
+	}
+</script>
+
+//18:点和正方形的关系
+//x,y分别小于坐标值即可
+<script type="x" id="ch0104/18">
+	var x = Number(prompt("请输入坐标轴X"))
+	var y = Number(prompt("请输入坐标轴Y"))
+	if (-1 <= x && x <= 1 && -1 <= y && y <= 1){
+		console.log("yes")
+	} else {
+		console.log("no")
+	}
+</script>
