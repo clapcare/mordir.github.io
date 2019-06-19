@@ -60,11 +60,11 @@
 
 //07:计算多项式的值
 <script type="x" id="ch0103/07">
+	var x = Number(prompt("请输入数字X"))
 	var a = Number(prompt("请输入数字A"))
 	var b = Number(prompt("请输入数字B"))
 	var c = Number(prompt("请输入数字C"))
 	var d = Number(prompt("请输入数字D"))
-	var x = Number(prompt("请输入数字X"))
 	var fx = a * Math.pow(x,3) + b * Math.pow(x,2) + c * x + d
 	console.log(fx.toFixed(7))
 </script>
@@ -104,8 +104,8 @@
 <script type="x" id="ch0103/11">
 	var a = Number(prompt("请输入双精度浮点数A"))
 	var b = Number(prompt("请输入双精度浮点数B"))
-	var i = a % b
-	console.log(i)
+	var r = a % b
+	console.log(r)
 </script>
 
 
@@ -428,4 +428,79 @@
 	} else {
 		console.log("no")
 	}
+</script>
+
+//19:简单计算器
+//波兰表达式符号左边，逆波兰表达式运算符写右边
+<script type="x" id="ch0104/19">
+	var x = Number(prompt("请输入整数X"))
+	var y = Number(prompt("请输入整数Y"))
+	var z = prompt("请输入运算符号")
+	if (z == "+"){
+		console.log(x + y)
+	} 
+	else if (z == "-"){
+			console.log(x - y)
+	}	
+	else if (z == "*"){
+		console.log(x * y)
+	}	
+	else if (z == "/" ){
+		if (y == 0){
+			console.log("Divided by zero!")
+		} else {
+			console(x / y)
+			}
+		}
+	else{
+	console.log("Invalid operator!")
+	}
+</script>
+
+//未完成20:求一元二次方程的根
+<script type="x" id="ch0104/19">
+	var a = Number(prompt("请输入整数A"))
+	var b = Number(prompt("请输入整数B"))
+	var c = Number(prompt("请输入整数C"))
+	if (z == "+"){
+		console.log(x + y)
+	} 
+	else if (z == "-"){
+			console.log(x - y)
+	}	
+</script
+
+//21:苹果和虫子2
+<script type="x" id="ch0104/19">
+	var n = Number(prompt("买了几箱苹果"))
+	var x = Number(prompt("几小时吃一个苹果"))
+	var y = Number(prompt("给虫子多少时间吃"))
+	var remain = n - Math.ceil(y / x)
+	console.log(remain)
+</script>
+
+//01:求平均年龄
+<script type="x" id="ch0105/01">
+	var n = Number(prompt("请输入学生人数"))
+	var sum = 0
+	var avg
+	for (var i = 0 ; i < n ; i++){
+		var age = Number(prompt("请输入年龄"))
+		sum += age 
+	}
+	avg = sum / n
+	console.log(avg.toFixed(2))
+</script>
+
+//02:财务管理
+<script type="x" id="ch0105/01">
+	var n = 12
+	var sum = 0
+	var avg
+	for (var i = 0 ; i < n ; i++){
+		var remain = Number(prompt("请输入月结余"))
+		sum += remain 
+	}
+	avg = sum / n
+	console.log("$" + avg.toFixed(2))
 </script>
