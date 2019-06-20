@@ -458,7 +458,7 @@
 </script>
 
 //未完成20:求一元二次方程的根
-<script type="x" id="ch0104/19">
+<script type="x" id="ch0104/20">
 	var a = Number(prompt("请输入整数A"))
 	var b = Number(prompt("请输入整数B"))
 	var c = Number(prompt("请输入整数C"))
@@ -471,7 +471,7 @@
 </script
 
 //21:苹果和虫子2
-<script type="x" id="ch0104/19">
+<script type="x" id="ch0104/21">
 	var n = Number(prompt("买了几箱苹果"))
 	var x = Number(prompt("几小时吃一个苹果"))
 	var y = Number(prompt("给虫子多少时间吃"))
@@ -493,7 +493,7 @@
 </script>
 
 //02:财务管理
-<script type="x" id="ch0105/01">
+<script type="x" id="ch0105/02">
 	var n = 12
 	var sum = 0
 	var avg
@@ -503,4 +503,78 @@
 	}
 	avg = sum / n
 	console.log("$" + avg.toFixed(2))
+</script>
+
+//03:均值
+<script type="x" id="ch0105/03">
+	var n = +prompt("请输入样本容量")
+	var sum = 0
+	var avg
+	for (var i = 0 ; i < n ; i++){
+		var sample = Number(prompt("请输入样本值"))
+		var sampleAbs = Math.abs(sample)
+		if (sampleAbs < 1000){
+			sum += sample
+		}
+	}
+	avg = sum / n
+	console.log(avg.toFixed(4))
+</script>
+
+//04:求整数的和平均值
+<script type="x" id="ch0105/04">
+	var n = +prompt("有几个整数")
+	var sum = 0
+	var avg
+	for (var i = 0 ; i < n ; i++){
+		var sample = Number(prompt("请输入数值"))
+		sum += sample
+	}
+	avg = sum / n
+	console.log(sum)
+	console.log(avg.toFixed(5))
+</script>
+
+//05:最高的分数
+<script type="x" id="ch0105/05">
+	var n = +prompt("考试人数")
+	var grade,max = 0
+	for (var i = 0 ; i < n ; i++){
+		var grade = Number(prompt("请输入成绩"))
+		if (grade > max)
+		max = grade
+	}
+	console.log(max)
+</script>
+
+//06:整数序列的元素最大跨度值
+<script type="x" id="ch0105/06">
+	var n = +prompt("几个数")
+	var gap,max = -Infinity,min = Infinity
+	for (var i = 0 ; i < n ; i++){
+		var num = Number(prompt("请输入数值"))
+		if (num > max){
+			max = num
+		}
+		if (num < min){
+			min = num
+		} 
+	}
+	gap = max- min
+	console.log(gap)
+</script>
+
+//未完成07:奥运奖牌计数
+<script type="x" id="ch0105/07">
+	var n = +prompt("请输入参赛天数")
+	var top1,top2,top3
+	for (var i = 0 ; i < n ; i++){
+		var top1 = Number(prompt("请输入金牌数量"))
+		top1 += top1
+		var top2 = Number(prompt("请输入银牌数量"))
+		top2 += top2
+		var top13 = Number(prompt("请输入铜牌数量"))
+		top3 += top3
+	}	
+	console.log(n,top1,top2,top3)
 </script>
