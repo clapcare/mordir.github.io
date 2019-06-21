@@ -564,17 +564,170 @@
 	console.log(gap)
 </script>
 
-//未完成07:奥运奖牌计数
+//07:奥运奖牌计数
 <script type="x" id="ch0105/07">
 	var n = +prompt("请输入参赛天数")
-	var top1,top2,top3
+	var top1,top2,top3,topa,topb,topc,sum
 	for (var i = 0 ; i < n ; i++){
-		var top1 = Number(prompt("请输入金牌数量"))
-		top1 += top1
-		var top2 = Number(prompt("请输入银牌数量"))
-		top2 += top2
-		var top13 = Number(prompt("请输入铜牌数量"))
-		top3 += top3
-	}	
-	console.log(n,top1,top2,top3)
+		var top1 = +Number(prompt("请输入金牌数量"))
+		topa += top1
+		var top2 = +Number(prompt("请输入银牌数量"))
+		topb += top2
+		var top3 = +Number(prompt("请输入铜牌数量"))
+		topc += top3
+	}
+	sum = topa + topb + topc 	
+	console.log(topa,topb,topc,sum)
+</script>
+
+//08:多边形内角和
+<script type="x" id="ch0105/08">
+	var n = +prompt("有几个边")
+	var degree,_degree = 0
+	for (var i = 1 ; i < n ; i++){
+		var degree = +Number(prompt("请输入角度"))
+		_degree += degree
+	}
+	_degree = (n - 2) * 180 - _degree
+	console.log(_degree)
+</script
+
+//09:奇数求和
+<script type="x" id="ch0105/09">
+	var m = +prompt("请输入第一个奇数")
+	var n = +prompt("请输入第二个奇数")
+	var sum = 0
+	if (m < n && n < 300){
+		for (var i = m ; i <= n ; i++){  
+			if (m % 2 !== 0){ 
+				sum += m
+			} m++
+		}
+		console.log(sum)
+	} else {
+	console.log("请重新输入")
+	}
+</script>
+
+//10:满足条件的数累加
+<script type="x" id="ch0105/10">
+	var m = +prompt("请输入第一个整数")
+	var n = +prompt("请输入第二个整数")
+	var sum = 0
+	if (0 < m && m < n && n < 1000){
+		for (var i = m ; i <= n ; i++){  
+			if (m % 17 === 0){ 
+				sum += m
+			} m++
+		}
+		console.log(sum)
+	} else {
+	console.log("请重新输入")
+	}
+</script>
+
+//11:整数的个数
+<script type="x" id="ch0105/11">
+	var k = +prompt("多少行")
+	var num1 = 0 , num5 = 0 , num10 = 0
+	if (1 < k && k < 100){
+		for (var i = 0; i < k; i++){
+			var num = +prompt("行数值")
+			if ( num >= 1 && num <= 10){
+				if (num === 1){
+				num1++
+				}
+				if (num === 5){
+					num5++
+				}
+				if (num === 10){
+					num10++
+				}
+			} else{
+				console.log(请重新输入)
+			}
+		}
+		console.log(num1 , num5 , num10)
+	} else{
+		console.log(请重新输入)
+	}
+</script
+
+//未完成12:与指定数字相同的数的个数
+<script type="x" id="ch0105/12">
+	var k = +prompt("多少行")
+</script>
+
+//13:乘方计算
+<script type="x" id="ch0105/13">
+	var a = +prompt("请输入整数A")
+	var n = +prompt("请输入整数N")
+	var pow
+	if(-1000000 <= a && a <= 1000000 && 1 <= n && n <= 1000){
+		pow=Math.pow(a,n)
+		if(Math.abs(pow) < 1000000){
+			console.log(pow)
+		} else{
+			console.log("值过大")
+		}	
+	} else{
+	console.log("请重新输入")
+	}
+</script>
+
+//14:人口增长问题
+<script type="x" id="ch0105/14">
+	var x = +prompt("请输入人口基数")
+	var n = +prompt("请输入时间")
+	var sum = 0
+	if(1 <= x && x <= 100 && 1 <= n && n <= 100){
+		for(var i = 0 ; i < n ; i++){
+			sum += (1 + 0.001) * x
+			x = sum
+		}
+		console.log(sum.toFixed(4))
+	} else ("请重新输入值")
+</script>
+
+//15:银行利息
+<script type="x" id="ch0105/15">
+	var r = +prompt("请输入投资年利率")
+	var m = +prompt("请输入本金")
+	var y = +prompt("投资几年")
+	var boss
+	if(0 < r && r < 400 && 100 < m && m < 1000000 && 0 < y && y < 400){
+		for (var i = 0 ; i < y ; i++){
+			boss = (1 + r * 0.01) * m
+			m = boss
+		}
+		console.log(parseInt(boss))
+	} else{
+		console.log("请重新输入")
+	}
+</script>
+
+//未完成16:买房子
+<script type="x" id="ch0105/16">
+	var n = +prompt("请输入年薪")
+	var k = +prompt("请输入房价增长率")
+	var housing_price = 200
+	var y = 0 , deposit = 0 , m = 0
+	var sum_housing_price
+	if(10 <= n && n <= 50 && 1 <= k && k <= 20){
+			for (var i = 1 ;  i <= 20 ; i++){
+				sum_housing_price = (1 + k * 0.01) * housing_price
+				housing_price = sum_housing_price
+				deposit = n * i
+				m++
+				if(deposit >= housing_price){
+					if (m < 20){
+						console.log(m)	
+					} else{
+						console.log("Impossible")	
+					}
+				}
+			}			
+	} else{
+		console.log("请重新输入值")
+	}
 </script>
