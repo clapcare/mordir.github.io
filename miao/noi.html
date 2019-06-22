@@ -706,22 +706,22 @@
 	}
 </script>
 
-//未完成16:买房子
+//16:买房子
 <script type="x" id="ch0105/16">
 	var n = +prompt("请输入年薪")
 	var k = +prompt("请输入房价增长率")
-	var housing_price = 200
-	var y = 0 , deposit = 0 , m = 0
+	var y = 0 , m = 1 , deposit = n , housing_price = 200
 	var sum_housing_price
 	if(10 <= n && n <= 50 && 1 <= k && k <= 20){
-			for (var i = 1 ;  i <= 20 ; i++){
+			for (var i = 2 ;  i <= 20 ; i++){
 				sum_housing_price = (1 + k * 0.01) * housing_price
 				housing_price = sum_housing_price
-				deposit = n * i
+				deposit += n
 				m++
 				if(deposit >= housing_price){
 					if (m < 20){
-						console.log(m)	
+						console.log(m)
+						break
 					} else{
 						console.log("Impossible")	
 					}
@@ -730,4 +730,82 @@
 	} else{
 		console.log("请重新输入值")
 	}
+</script>
+
+//17:菲波那契数列
+//公式Fn=F(n-1)+F(n-2) ，其中n>=2，非计算公式，仅代表前两项相加 
+<script type="x" id="ch0105/17">
+	var k = +prompt("请输入一个整数K")
+	var a = 1, b = 1, f
+	if (1 <= k && k <= 46){
+		if (k === 0){
+			console.log(0)
+		}
+		if (k === 1 || k === 2){
+			console.log(1)
+		}
+		for (var i = 3 ; i <= k ; i++){
+			f = a + b
+			b = a
+			a = f
+		}
+		console.log(f)
+	} else{
+	console.log("请重新输入整数K")
+	}
+</script>
+
+//18:鸡尾酒疗法
+<script type="x" id="ch0105/18">
+	var n = +prompt("共几组")
+	var x , y
+	if (1 < n && n <= 20){
+		var total_case = +prompt("鸡尾酒疗法总病例数")
+		var worked = +prompt("鸡尾酒疗法有效病例数")
+		x = worked / total_case
+		for (var i = 2 ; i <= n ; i++){
+			var total_case = +prompt("其他疗法总病例数")
+			var worked = +prompt("其他疗法有效病例数")
+			y = worked / total_case
+			if (y - x > 0.05){
+			console.log("better")
+			} else if (x - y > 0.05){
+				console.log("worse")
+			} else{
+				console.log("same")
+			}
+		}
+	} else {
+		console.log("请重新输入组")
+	}
+</script>
+
+//19:救援
+<script type="x" id="ch0105/18">
+	var n = +prompt("几个屋顶")
+	var t
+	var total_time = 0
+	for (var i = 0 ; i < n ; i++){
+		var x = +prompt("X坐标")
+		var y = +prompt("Y坐标")
+		var m = +prompt("几个人")
+		t = Math.sqrt(x * x + y * y) / 50 * 2 + m + m * 0.5
+		total_time += t
+	}
+	console.log(Math.ceil(total_time))	
+</script>
+
+//未完成20:球弹跳高度的计算
+<script type="x" id="ch0105/18">
+	var h = +prompt("输入初始高度")
+	var h_drop
+	var h_sum = 0
+	for (var i = 1 ; i <= 10 ; i++){
+		h_drop = h / 2
+		h = h_drop
+		h_sum += h_drop * 2 
+	}
+	h_sum = h_sum - h_drop
+	console.log(h_sum)
+	console.log(h_drop)
 </script>
