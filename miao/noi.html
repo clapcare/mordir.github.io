@@ -479,6 +479,7 @@
 	console.log(remain)
 </script>
 
+
 //01:求平均年龄
 <script type="x" id="ch0105/01">
 	var n = Number(prompt("请输入学生人数"))
@@ -567,7 +568,8 @@
 //07:奥运奖牌计数
 <script type="x" id="ch0105/07">
 	var n = +prompt("请输入参赛天数")
-	var top1,top2,top3,topa,topb,topc,sum
+	var top1,top2,top3,sum
+	var topa = 0 , topb = 0 , topc = 0 
 	for (var i = 0 ; i < n ; i++){
 		var top1 = +Number(prompt("请输入金牌数量"))
 		topa += top1
@@ -681,8 +683,8 @@
 	var n = +prompt("请输入时间")
 	var sum = 0
 	if(1 <= x && x <= 100 && 1 <= n && n <= 100){
-		for(var i = 0 ; i < n ; i++){
-			sum += (1 + 0.001) * x
+		for(var i = 1 ; i <= n ; i++){
+			sum = (1 + 0.001) * x
 			x = sum
 		}
 		console.log(sum.toFixed(4))
@@ -781,7 +783,7 @@
 </script>
 
 //19:救援
-<script type="x" id="ch0105/18">
+<script type="x" id="ch0105/19">
 	var n = +prompt("几个屋顶")
 	var t
 	var total_time = 0
@@ -795,17 +797,17 @@
 	console.log(Math.ceil(total_time))	
 </script>
 
-//未完成20:球弹跳高度的计算
-<script type="x" id="ch0105/18">
+//20:球弹跳高度的计算
+<script type="x" id="ch0105/20">
 	var h = +prompt("输入初始高度")
 	var h_drop
-	var h_sum = 0
-	for (var i = 1 ; i <= 10 ; i++){
+	var h_sum = h
+	for (var i = 1 ; i < 10 ; i++){
 		h_drop = h / 2
 		h = h_drop
 		h_sum += h_drop * 2 
 	}
-	h_sum = h_sum - h_drop
-	console.log(h_sum)
-	console.log(h_drop)
+	console.log(h_sum.toFixed(4))
+	h_drop = h / 2
+	console.log(h_drop.toFixed(7))
 </script>
