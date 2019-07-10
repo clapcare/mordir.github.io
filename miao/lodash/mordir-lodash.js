@@ -3,6 +3,6 @@ var mordir = {
 		
 	// },
 	compact: function(ary) {
-		return flite(i => i);
+		return ary.filter(i => i);
 	},
 }
